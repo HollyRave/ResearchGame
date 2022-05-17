@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ActivateStone : MonoBehaviour
 {
-    [SerializeField] private List<Stone> _stones;
-    
+    [SerializeField] private List<GameObject> _stones;
+        
     public void Activate()
     {
-        foreach (var stone in _stones)
+        foreach (var item in _stones)
         {
-         //тут чёто со стоунами надо
+            item.SetActive(true);
         }
+        
     }
 }
